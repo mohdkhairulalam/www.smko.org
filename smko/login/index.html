@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member log-in</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- SolaimanLipi Font (Online Source) -->
+    <link href="https://fonts.cdnfonts.com/css/solaimanlipi" rel="stylesheet">
+ 
+</head>
+<body>
+
+<div class="main-container">
+    <!-- নির্দেশনা কার্ড -->
+    <div class="instruction-card">
+        <h2 style="color: lightgray; padding-bottom: 10px; text-align: center;">স্বপ্নময় মানব কল্যাণ সংগঠন-২২</h2>
+        <h3>ব্যবহার নির্দেশিকা</h3>
+        <ul>
+            <li>এই লগ-ইন পেইজ টি শুধুমাত্র আমাদের সংগঠনের নিয়মিত সদস্যদের জন্য।</li>
+            <li>আপনি যদি আমাদের ওয়েব সাইটে লগ-ইন করতে চান তাহলে আগে <a href="signup.html" style="text-decoration: none; color: darkorange;"><b>সাইন-আপ</b></a> করে আসুন </li>
+            <li>আপনি যদি নিয়মিত দান করার জন্য আমাদের নিয়মিত সদস্য হতে চান তাহলে আগে এখানে গিয়ে <a href="signup.html" style="text-decoration: none; color: darkorange;"><b>সাইন-আপ</b></a></a> করুন</li>
+            <li> আমাদের নিয়মিত সদস্য হওয়ার জন্য <a href="signup.html" style="text-decoration: none; color: darkorange;"><b>সাইন-আপ</b></a> এ ক্লিক করুন</li>
+            <li>যদি আপনি আগে থেকে-ই সাইন-আপ করে প্রোফাইল তৈরি করে রাখেন তাহলে এখন "লগ-ইন" এ গিয়ে আপনার সঠিক ইমেইল ও পাসওয়ার্ড দিয়ে লগ-ইন করুন</li>
+        </ul>
+    </div>
+
+    <!-- লগইন বক্স -->
+    <div class="login-box">
+        <div class="content">
+            <h2 class="text-center mb-4">লগ-ইন</h2>
+            <p style="color: darkturquoise; font-size: 10px; text-align: center;">আমাদের নিয়মিত ও স্থায়ী সদস্য যারা,তারা এখানে নাম্বার ও পাসওয়ার্ড দিয়ে লগ-ইন করুন </p>
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">মোবাইল নাম্বার</label>
+                    <input type="tel" class="form-control" placeholder="আপনার মোবাইল নাম্বার দিন" required oninput="onlyEnglishNumbers(this)">
+                    <div id="mobError" style="color: #ff4d4d; font-size: 0.8rem; margin-top: 5px;"></div>
+                </div>
+                
+                <div class="mb-4">
+                    <label class="form-label">পাসওয়ার্ড</label>
+                    <input type="password" class="form-control" placeholder="আপনার পাসওয়ার্ড দিন">
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-custom">লগ-ইন করুন</button>
+                </div>
+    <div class="text-center mt-3">
+        <small>পাসওয়ার্ড ভূলে গেছি | <a href="#" class="text-info text-decoration-none">পাসওয়ার্ড উদ্ধার করুন</a></small>
+    </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+function onlyEnglishNumbers(input) {
+    // ইংরেজি সংখ্যা (0-9) ছাড়া অন্য সব কিছু রিমুভ করার লজিক
+    let value = input.value;
+    
+    // Regex ব্যবহার করে শুধুমাত্র ইংরেজি সংখ্যা রাখা হচ্ছে
+    input.value = value.replace(/[^0-9]/g, '');
+
+    let errorDiv = document.getElementById("mobError");
+    
+    // যদি ইউজার অন্য কিছু টাইপ করার চেষ্টা করে তবে মেসেজ দেখাবে
+    if (value !== input.value) {
+        errorDiv.innerHTML = "এখানে ইংরেজিতে আপনার মোবাইল নাম্বার দিন";
+    } else {
+        errorDiv.innerHTML = "";
+    }
+}
+</script>
+
+</body>
+</html>

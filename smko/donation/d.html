@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>দান করুন - ডোনেশন ফর্ম</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- সুলাইমানি লিপি ফন্ট লিঙ্ক (Web Font CDN) -->
+    <link href="https://fonts.cdnfonts.com/css/solaimanlipi" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f4f7f6;
+            font-family: 'SolaimanLipi', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .donation-card, .info-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+        }
+        .info-card {
+            background: #ffffff;
+            border-left: 5px solid #198754;
+        }
+        .form-label {
+            font-weight: 600;
+            color: #495057;
+        }
+        .btn-donate {
+            background: linear-gradient(135deg, #28a745, #218838);
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+        .btn-donate:hover {
+            background: linear-gradient(135deg, #218838, #1e7e34);
+            transform: translateY(-2px);
+        }
+        .method-badge {
+            font-size: 0.9rem;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            
+            <!-- হেডার অংশ -->
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-success">মানবতার কল্যাণে এগিয়ে আসুন</h2>
+                <h3>www.smko.org</h3>
+                <p class="text-muted">আপনার সামান্য অনুদান একটি অসহায় মানুষের জীবন বদলে দিতে পারে।</p>
+            </div>
+
+            <!-- টাকা পাঠানোর অ্যাকাউন্ট তথ্য (নতুন সেকশন) -->
+            <div class="card info-card p-4 mb-4">
+                <h5 class="text-success fw-bold mb-3"><i class="fa-solid fa-circle-info me-2"></i>টাকা পাঠানোর নিয়মাবলি:</h5>
+                <p class="text-muted small mb-3">প্রথমে নিচে দেওয়া যেকোনো একটি নাম্বারে টাকা পাঠান। টাকা পাঠানো সফল হলে তারপর ট্রানজেকশন আইডি (TrxID) কপি করে নিন বা সংগ্রহ করুন তারপর নিচে গিয়ে আপনার নাম, মোবাইল নাম্বার, টাকার পরিমান, trxID দিয়ে সাবমিট করুন ।</p>
+                
+                <div class="table-responsive">
+                    <table class="table table-sm table-borderless align-middle mb-0">
+                        <p><a href="" style="text-decoration: none; text-align: center;">বিকাশ থেকে টাকা পাঠানর নিয়ম দেখুন</a></p>
+                        <p><a href="" style="text-decoration: none; text-align: center;">নগদ থেকে টাকা পাঠানর নিয়ম দেখুন</a></p>
+                        
+                        <p ><a href="" style="text-decoration: none; text-align: center;">রকেট থেকে টাকা পাঠানর নিয়ম দেখুন</a></p>
+                        <tbody>
+                            <tr>
+                                <td><span class="badge bg-danger method-badge">বিকাশ (Personal)</span></td>
+                                <td class="fw-bold text-dark">০১৭XXXXXXXX</td>
+                                
+                            </tr>
+                            <tr>
+                                <td><span class="badge bg-warning text-dark method-badge">নগদ (Personal)</span></td>
+                                <td class="fw-bold text-dark">০১XXXXXXXXX</td>
+                                
+                            </tr>
+                            <tr>
+                                <td><span class="badge bg-purple method-badge" style="background-color: #8c3494; color: white;">রকেট (Personal)</span></td>
+                                <td class="fw-bold text-dark">০১XXXXXXXXX-X</td>
+                                
+                            </tr>
+                            <tr>
+                                <td><span class="badge bg-primary method-badge">ব্যাংক অ্যাকাউন্ট</span></td>
+                                <td class="small text-dark">
+                                    <strong>ব্যাংক নাম:</strong> ডাচ-বাংলা ব্যাংক<br>
+                                    <strong>নাম:</strong> আল-ইহসান ফাউন্ডেশন<br>
+                                    <strong>হিসাব নং:</strong> ১২৩.৪৫৬.৭৮৯
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- মূল ফর্ম কার্ড -->
+            <div class="card donation-card p-4 p-sm-5 bg-white">
+                <h4 class="mb-4 text-center border-bottom pb-3"><i class="fa-solid fa-heart text-danger me-2"></i>অনুদানের বিবরণ দিন</h4>
+                
+                <form action="#" method="POST">
+                    
+                    <!-- নাম -->
+                    <div class="mb-3">
+                        <label for="name" class="form-label"><i class="fa-solid fa-user me-2 text-secondary"></i>আপনার নাম</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="এখানে আপনার লিখুন" required>
+                    </div>
+
+                    <!-- মোবাইল নাম্বার -->
+                    <div class="mb-3">
+                        <label for="mobile_number" class="form-label"><i class="fa-solid fa-phone me-2 text-secondary"></i>আপনার মোবাইল নাম্বার</label>
+                        <input type="tel" class="form-control" id="mobile_number" name="mobile_number" placeholder="01XXXXXXXX" required>
+                    </div>
+
+                    <!-- পেমেন্ট মেথড (বিকাশ, নগদ, রকেট, ব্যাংক) -->
+                    <div class="mb-3">
+                        <label for="pay_method" class="form-label"><i class="fa-solid fa-credit-card me-2 text-secondary"></i>যে মাধ্যমে আপনি টাকা পাঠিয়েছেন সেটা সিলেক্ট করে দিন</label>
+                        <select class="form-select" id="pay_method" name="pay_method" required>
+                            <option value="" selected disabled>মাধ্যম নির্বাচন করুন</option>
+                            <option value="bkash">বিকাশ (bKash)</option>
+                            <option value="nagad">নগদ (Nagad)</option>
+                            <option value="rocket">রকেট (Rocket)</option>
+                            <option value="bank">ব্যাংক ট্রান্সফার (Bank Transfer)</option>
+                        </select>
+                    </div>
+
+                    <!-- যে নাম্বার থেকে টাকা পাঠানো হয়েছে -->
+                    <div class="mb-3">
+                        <label for="payment_number" class="form-label"><i class="fa-solid fa-money-check me-2 text-secondary"></i>পেমেন্ট নাম্বর (যে নাম্বর থেকে আপনি টাকা পাঠিয়েছেন সেই নাম্বার দিন)</label>
+                        <input type="tel" class="form-control" id="payment_number" name="payment_number" placeholder="01XXXXXXXXX" required>
+                    </div>
+
+                    <div class="row">
+                        <!-- টাকার পরিমাণ -->
+                        <div class="col-sm-6 mb-3">
+                            <label for="amount" class="form-label"><i class="fa-solid fa-bangladeshi-taka-sign me-2 text-secondary"></i>টাকার পরিমাণ লিখুন (আপনি কত টাকা পাঠাইছেন)</label>
+                            <input type="number" class="form-control" id="amount" name="amount" placeholder="যেমন: 500" min="1" required>
+                        </div>
+                        
+                        <!-- ট্রানজেকশন আইডি (TrxID) -->
+                        <div class="col-sm-6 mb-3">
+                            <label for="trxID" class="form-label"><i class="fa-solid fa-key me-2 text-secondary"></i>TrxID (ট্রানজেকশন আইডি)</label>
+                            <input type="text" class="form-control" id="trxID" name="trxID" placeholder="যেমন: 8N73X92P" required>
+                        </div>
+                    </div>
+
+                    <!-- সাবমিট বাটন -->
+                    <button type="submit" class="btn btn-donate w-100 mt-3 rounded-pill text-uppercase fs-5">
+                        <i class="fa-solid fa-hand-holding-heart me-2"></i>সাবমিট 
+                    </button>
+
+                </form>
+            </div>
+            
+            <!-- ফুটার বা শর্তাবলী -->
+            <div class="text-center mt-4">
+                <small class="text-muted">আপনার তথ্য আমাদের কাছে সম্পূর্ণ নিরাপদ। যেকোনো প্রয়োজনে যোগাযোগ করুন: <a href="tel:+880123456789" class="text-decoration-none text-success">০১২৩৪৫৬৭৮৯</a></small>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap 5 JS Bundle CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

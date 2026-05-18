@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- SolaimanLipi Font (Online Source) -->
+    <link href="https://fonts.cdnfonts.com/css/solaimanlipi" rel="stylesheet">
+ 
+</head>
+<body>
+
+<div class="main-container">
+    <!-- নির্দেশনা কার্ড -->
+    <div class="instruction-card">
+        <h2 style="color:darkgrey; text-align:center; padding-bottom:10px;">স্বপ্নময় মানব কল্যাণ সংগঠন-২২</h2>
+        <h3>"সাইন-আপ" করার নির্দেশিকা</h3>
+        <ul>
+            <li>আপনি আমাদের সংগঠনের স্থায়ী সদস্য হতে চাইলে সাইন-আপ করে নিন</li>
+            <li>আপনি যদি আমাদের সংগঠনের নিয়মিত সদস্য হতে চান তাহলে সাইন-আপ করে নিন </li>
+            <li>আপনি যদি প্রতিটি এতিমদের ব্যক্তিগত প্রোফাইল নিয়মিত দেখতে চান তাহলে সাইন-আপ করুন</li>
+            <li>আপনি যদি প্রতি সপ্তাহে কিংবা প্রতি মাসে মাসে এতিমদের জন্য দান করতে চান তাহলে সাইন-আপ করুন</li>
+            <li>আপনি যদি আপনার দেয়া টাকার হিসাব ও আমাদের সংগঠনের অন্যান্য সদস্যের দানকৃত টাকার হিসাব নিকাশ মনিটরিং করতে চান তাহলে সাইন-আপ করে আপনার প্রোফাইল তৈরি করে নিন।</li>
+            
+            <li>আমাদের সংগঠনের আয় ব্যয়ের হিসাব নিকাশ দেখতে চান, আপনি নিয়মিত কত টাকা দিচ্ছেন, সংগঠনে কত টাকা কালেকশন হয়েছে, কত টাকা ব্যয় হচ্ছে এবং আমাদের সংগঠনের যাবতীয় কার্যকলাপ নিয়মিত মনিটরিং করতে চান তাহলে সাইন-আপ করে আমাদের নিয়মিত সদস্য বা স্থায়ী সদস্য হোন।</li>
+        </ul>
+    </div>
+
+    <!-- লগইন বক্স -->
+    <div class="login-box">
+        <div class="content">
+            <h2 class="text-center mb-4">সাইন-আপ</h2>
+            <p style="color: rgb(13, 219, 234); margin-bottom: 20px; font-size: 10px; text-align: center;"> এখানে "সাইন-আপ" করে আমাদের সংগঠনের নিয়মিত ও স্থায়ী সদস্য হোন</p>
+            <form>
+               <div class="mb-3">
+                    <label class="form-label">আপনার সম্পূর্ণ নাম লিখুন</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="এখানে নাম লিখুন" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">আপনার মোবাইল নাম্বারঃ <br> <b><code>+88 </code></b></label>
+                    <input type="tel" name="mob-number" id="mob-number" class="form-control" placeholder="আপনার মোবাইল নাম্বার দিন" required oninput="onlyEnglishNumbers(this)">
+    <div id="mobError" style="color: #ff4d4d; font-size: 0.8rem; margin-top: 5px;"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label"> আপনার ইমেইল দিন</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="এখানে ইমেইল দিন" required>
+                </div>
+
+               <div class="mb-3">
+                <label class="form-label"> আপনার লিঙ্গ সিলেক্ট করুন</label>
+                    <select name="gender" class="form-control sel_gender" required>
+                        <option value="" selected disabled>লিঙ্গ</option>
+                        <option value="male">পুরুষ</option>
+                        <option value="female">মহিলা</option>
+                        <option value="other">অন্যান্য</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+
+                    <label class="form-label">নতুন পাসওয়ার্ড </label>
+                    <p style="color: gold; text-align: center; font-size: 10px;">এখানে একটা নতুন পাসওয়ার্ড তৈরি করুন, এখানে যে পাসওয়ার্ড দিবেন, ওইটা দিয়ে আপনি নিয়মিত লগ-ইন করে প্রোফাইলে ঢুকতে পারবেন। </p>
+                    <input type="password" name="pass" id="pass" class="form-control" placeholder="আপনার পাসওয়ার্ড দিন" required>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label">উপরের পাসওয়ার্ড টি পুনরায় দিন</label>
+                    <input type="password" name="passw" id="passw" class="form-control" placeholder="আপনার পাসওয়ার্ড দিন" required onkeyup="checkPassword()">
+                    <div id="matchError" style="color: #ff4d4d; font-size: 0.8rem; margin-top: 5px;"></div>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-custom">সাইন-আপ করুন</button>
+                </div>
+    <div class="text-center mt-3">
+        <small>আমার অলরেডি একটা একাউন্ট আছে |  <a href="index.html" class="text-info text-decoration-none">লগ-ইন</a></small>
+    </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+function checkPassword() {
+    let p1 = document.getElementById("pass").value;
+    let p2 = document.getElementById("passw").value;
+    let errorDiv = document.getElementById("matchError");
+    let input2 = document.getElementById("passw");
+
+    // যদি দ্বিতীয় পাসওয়ার্ড ফিল্ডটি খালি থাকে তবে মেসেজ মুছে ফেলুন
+    if (p2 === "") {
+        errorDiv.innerHTML = "";
+        input2.style.borderColor = "rgba(255, 255, 255, 0.2)";
+        return;
+    }
+
+    if (p1 !== p2) {
+        // পাসওয়ার্ড না মিললে
+        errorDiv.innerHTML = "আপনার পাসওয়ার্ড টি উপরের পাসওয়ার্ডের সাথে মিল হয় নি, দয়া করে উভয় পাসওয়ার্ড একই দিন";
+        errorDiv.style.color = "#ff4d4d"; // লাল রঙ
+        input2.style.borderColor = "#ff4d4d";
+    } else {
+        // পাসওয়ার্ড মিলে গেলে
+        errorDiv.innerHTML = "পাসওয়ার্ড মিলেছে";
+        errorDiv.style.color = "#2ecc71"; // সবুজ রঙ
+        input2.style.borderColor = "#2ecc71";
+    }
+}
+</script>
+
+<script>
+function onlyEnglishNumbers(input) {
+    // ইংরেজি সংখ্যা (0-9) ছাড়া অন্য সব কিছু রিমুভ করার লজিক
+    let value = input.value;
+    
+    // Regex ব্যবহার করে শুধুমাত্র ইংরেজি সংখ্যা রাখা হচ্ছে
+    input.value = value.replace(/[^0-9]/g, '');
+
+    let errorDiv = document.getElementById("mobError");
+    
+    // যদি ইউজার অন্য কিছু টাইপ করার চেষ্টা করে তবে মেসেজ দেখাবে
+    if (value !== input.value) {
+        errorDiv.innerHTML = "এখানে ইংরেজিতে আপনার মোবাইল নাম্বার দিন";
+    } else {
+        errorDiv.innerHTML = "";
+    }
+}
+</script>
+
+</body>
+</html>
